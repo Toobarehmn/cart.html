@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="cart"></a>
+        </li>
+      </ul>
+      <br>
+      <br>
+      <h1>Men's dresses</h1>
+      <img style="height: 300px;" width="300px;" src="img of mens.webp" alt="">
+      <br>
+      <h3>Description</h3>
+      <p>Rivers and streams make most primary valley cuts, carving steep-walled sides and a narrow floor that from afar looks like the letter "V." The gradient of the river—how quickly it drops—helps define the steepness of the sides and the width of the floor. Mountain valleys, for example, tend to have near-vertical walls and a narrow channel, but out on the plains, the slopes are shallow and the channel is wide.</p>
+      <br>
+      <button onclick="add()">Add to cart</button>
+
+
+      <script>
+        var count = 0;
+        var cart = document.getElementById('cart');
+        var  nav_link = document.createElement('a');
+        nav_link.setAttribute('class','nav-link')
+        cart.appendChild(nav_link);
+        function add(){
+            count = count +1;
+            nav_link.innerHTML="cart"+count;
+        }
+      </script>
+</body>
+</html>
